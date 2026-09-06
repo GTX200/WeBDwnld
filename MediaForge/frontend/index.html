@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b16">
+  <meta name="description" content="MediaForge - downloader media modern">
+  <title>MediaForge — Media Downloader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+
+  <header class="nav">
+    <a class="brand" href="#"><span class="logo">M</span><span>MediaForge</span></a>
+    <div class="nav-actions">
+      <button id="themeBtn" class="icon-btn" title="Tema">☾</button>
+      <a id="waTop" class="wa-btn" target="_blank" rel="noopener">WhatsApp Developer</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge">⚡ FAST • CLEAN • MULTI-PLATFORM</div>
+      <h1>Download media.<br><span>Tanpa ribet.</span></h1>
+      <p>Tempel link YouTube, TikTok, Instagram, atau Facebook. Pilih video, audio, atau gambar dan kualitas yang Anda inginkan.</p>
+
+      <div class="panel">
+        <div class="url-row">
+          <input id="url" type="url" placeholder="Tempel URL video di sini..." autocomplete="off">
+          <button id="pasteBtn" class="secondary">Paste</button>
+          <button id="analyzeBtn" class="primary">Analisis ✨</button>
+        </div>
+        <div class="platforms">
+          <span>Didukung</span><b>▶ YouTube</b><b>♪ TikTok</b><b>◎ Instagram</b><b>f Facebook</b>
+        </div>
+      </div>
+    </section>
+
+    <section id="result" class="result hidden">
+      <div class="media-preview">
+        <div id="thumb" class="thumb"><span>PREVIEW</span></div>
+        <div class="meta">
+          <div id="platform" class="mini-badge">MEDIA</div>
+          <h2 id="title">Memuat...</h2>
+          <p id="info">Pilih format untuk mulai.</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <label>Format
+          <select id="format">
+            <option value="video">🎬 Video</option>
+            <option value="audio">🎧 Audio</option>
+            <option value="image">🖼️ Gambar / Cover</option>
+          </select>
+        </label>
+        <label id="qualityWrap">Kualitas
+          <select id="quality">
+            <option value="best">Terbaik</option>
+            <option value="1080">1080p</option>
+            <option value="720" selected>720p</option>
+            <option value="480">480p</option>
+            <option value="360">360p</option>
+          </select>
+        </label>
+        <label id="audioWrap">Audio
+          <select id="audioFormat">
+            <option value="mp3">MP3</option>
+            <option value="m4a">M4A</option>
+          </select>
+        </label>
+        <button id="downloadBtn" class="download">⬇ Download</button>
+      </div>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section class="features">
+      <article><div class="feature-icon">🎯</div><h3>Kualitas Fleksibel</h3><p>Pilih kualitas video sesuai kebutuhan dan koneksi.</p></article>
+      <article><div class="feature-icon">🎧</div><h3>Audio Extract</h3><p>Ambil audio menjadi MP3 atau M4A dari media yang didukung.</p></article>
+      <article><div class="feature-icon">🛡️</div><h3>API Aman</h3><p>API key disimpan di backend, bukan di kode frontend publik.</p></article>
+      <article><div class="feature-icon">🚀</div><h3>GitHub Ready</h3><p>Frontend dapat langsung dipasang sebagai GitHub Pages.</p></article>
+    </section>
+
+    <section class="history">
+      <div class="section-head"><h2>Riwayat lokal</h2><button id="clearHistory" class="ghost">Hapus</button></div>
+      <div id="historyList" class="history-list"><p class="muted">Belum ada riwayat.</p></div>
+    </section>
+
+    <section class="notice">
+      <strong>ℹ️ Penggunaan bertanggung jawab</strong>
+      <p>Gunakan hanya pada konten yang Anda miliki, Anda punya izin untuk mengunduh, atau platform mengizinkannya. Media privat/terproteksi dan DRM tidak didukung.</p>
+    </section>
+  </main>
+
+  <footer>MediaForge © 2026 • Built for authorized media workflows</footer>
+  <audio id="bgMusic" loop preload="none"></audio>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
